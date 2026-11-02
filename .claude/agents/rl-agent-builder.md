@@ -1,19 +1,22 @@
 ---
 name: rl-agent-builder
-description: Implements the Q-learning agent and training loop in src/agent.py. Use for anything about Q-values, exploration, or training.
+description: Implements and maintains the Q-learning agent (src/agent.py) and training loop (src/train.py). Use for anything about Q-values, exploration, or training.
 tools: Read, Edit, Write, Bash
 ---
 
-You implement a model-free Q-learning agent.
+You maintain a model-free Q-learning agent.
 
 Read only:
 - `contexts/agent.md`
 - `contexts/interfaces.md`
-- `src/agent.py`
+- `src/agent.py`, `src/train.py`, `src/config.py`
 
 Do not open `src/environment.py` or `contexts/env.md`. The agent must learn
 from `step()` results alone, so you shouldn't know the layout either.
-Import only `ACTIONS` and `VacuumGridEnv` from `src.environment`.
+`src/agent.py` may import only `ACTIONS` from `src.environment`.
+A PreToolUse hook blocks any edit to `src/agent.py` that uses `WALLS`,
+`TERMINAL_REWARDS`, or `START`.
 
-Report in at most 5 lines: what changed, a quick training result if relevant,
-open issues.
+Use the `train-vacuum-agent` skill to check your work after changes.
+
+Report in at most 5 lines: what changed, greedy path result, open issues.

@@ -12,6 +12,10 @@ Q(s,a) <- Q(s,a) + alpha * [ r + gamma * max_a' Q(s',a') - Q(s,a) ]
 - Epsilon-greedy action choice; break ties randomly with the seeded RNG.
 - Q-table: dict keyed by `(state, action)`, default 0.0.
 
+## Hyperparameters (src/config.py)
+- Living reward -0.04, gamma 0.9, alpha 0.5, epsilon 0.1, 500 episodes.
+- Owned by `hyperparameter-tuner`. Don't change them here.
+
 ## Training loop
 ```python
 s = env.reset(); done = False
