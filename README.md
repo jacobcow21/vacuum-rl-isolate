@@ -1,4 +1,4 @@
-# Vacuum Robot RL — Lab 4: Q-learning (Isolate strategy)
+# Vacuum Robot RL — Lab 5 (Group 14): Q-learning (Isolate strategy)
 
 A vacuum robot learns to reach the +10 cell in a 4x4 grid world. The
 transition function T and reward function R are unknown, so the robot uses
